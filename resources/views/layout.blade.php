@@ -8,6 +8,7 @@
         <li><a href="/laravel_tutorial/public/">Home</a></li>
         <li><a href="/laravel_tutorial/public/about">About Us</a></li>
         <li><a href="/laravel_tutorial/public/contact">Contact</a></li>
+        <li><a href="/laravel_tutorial/public/projects">Projects</a></li>
     </ul>
 
     @yield('content')
