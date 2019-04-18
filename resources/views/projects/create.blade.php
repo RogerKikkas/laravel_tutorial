@@ -3,7 +3,7 @@
 @section('content')
     <h1>Create a New Project</h1>
 
-    <form method="POST" action="/projects">
+    <form method="POST" action="/laravel_tutorial/public/projects">
         {{ csrf_field() }}
         <div>
             <input type="text" name="title" placeholder="Project title">
