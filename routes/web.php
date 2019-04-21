@@ -22,7 +22,7 @@ Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 
-Route::resource('projects', 'ProjectsController');
+Route::resource('projects', 'ProjectsController')->middleware('can:update,project');
 
 /*
 Route::get('/projects', 'ProjectsController@index');
@@ -36,6 +36,7 @@ Route::delete('/projects/{project}', 'ProjectsController@destroy');
 
 Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
 Route::patch('/tasks/{task}', 'ProjectTasksController@update');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

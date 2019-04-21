@@ -41,6 +41,8 @@ class ProjectsController extends Controller
     {
         #$project = app('\App\Project');
         #$project = Project::findOrFail($id);
+        //$this->authorize('update', $project);
+        // abort_unless(\Gate::allows('update', $project), 403);
 
         return view('projects.show', compact('project'));
     }
