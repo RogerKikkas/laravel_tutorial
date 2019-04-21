@@ -32,6 +32,7 @@ class ProjectsController extends Controller
 
     public function show(Project $project)
     {
+        #$project = app('\App\Project');
         #$project = Project::findOrFail($id);
 
         return view('projects.show', compact('project'));
