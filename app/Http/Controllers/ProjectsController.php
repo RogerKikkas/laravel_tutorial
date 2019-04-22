@@ -32,6 +32,8 @@ class ProjectsController extends Controller
 
         event(new ProjectCreated($project));
 
+        flash('Your project has been created.');
+
         return redirect('/projects');
     }
 
