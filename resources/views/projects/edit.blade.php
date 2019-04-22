@@ -30,6 +30,8 @@
         </div>
     </form>
 
+    @include('errors')
+
     <form method="POST" action="/laravel_tutorial/public/projects/{{ $project->id }}">
         @method('DELETE')
         @csrf

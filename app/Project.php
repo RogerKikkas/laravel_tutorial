@@ -10,6 +10,15 @@ class Project extends Model
         'title', 'description', 'owner_id'
     ];
 
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($project) {
+           //
+        });
+    }
+
     public function tasks()
     {
         return $this->hasMany(Task::class);
